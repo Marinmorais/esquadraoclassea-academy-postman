@@ -42,6 +42,33 @@
 										],
 										"type": "text/javascript"
 									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"function MailMari(){\r",
+											"\r",
+											"    var MailMari = [\"marianaqa@gmail.com\"];\r",
+											"    var randomItem = MailMari[Math.floor(Math.random() * MailMari.length)];\r",
+											"\r",
+											"    return randomItem;\r",
+											"}\r",
+											"\r",
+											"function PasswordMari(){\r",
+											"\r",
+											"    var PasswordMari = [\"Marianaqa14@#\"];\r",
+											"    var randomItem = PasswordMari[Math.floor(Math.random() * PasswordMari.length)];\r",
+											"\r",
+											"    return randomItem;\r",
+											"}\r",
+											"\r",
+											"pm.environment.set(\"MailMari\", MailMari());\r",
+											"\r",
+											"pm.environment.set(\"PasswordMari\", PasswordMari());"
+										],
+										"type": "text/javascript"
+									}
 								}
 							],
 							"request": {
